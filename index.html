@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Huong Nguyen</title>
+    <title>Portfolio - Jessica Ouyang</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,50 +11,134 @@
             padding: 0;
             line-height: 1.6;
             color: #333;
+            background: #ffffff;
         }
         header {
-            background: #f4f4f4;
-            padding: 1rem 0;
+            background: #000;
+            color: #fff;
+            padding: 2rem;
             text-align: center;
         }
         header h1 {
             margin: 0;
-            font-size: 2.5rem;
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
         nav {
             margin: 1rem 0;
         }
         nav a {
-            margin: 0 10px;
+            margin: 0 15px;
             text-decoration: none;
-            color: #007BFF;
+            color: #fff;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
-        section {
-            padding: 2rem;
-            border-bottom: 1px solid #ddd;
+        nav a:hover {
+            color: #ffa500;
+        }
+        .hero {
+            background: url('images/hero-image.jpg') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        .hero h2 {
+            font-size: 2.5rem;
+        }
+        .content {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
         }
         .project {
+            display: flex;
+            flex-wrap: wrap;
             margin-bottom: 2rem;
+            align-items: center;
+            gap: 2rem;
         }
-        .project h2 {
-            margin-top: 0;
+        .project img {
+            flex-shrink: 0;
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border: 3px solid #ddd;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .project-details {
+            flex-grow: 1;
+        }
+        .project h3 {
+            margin: 0;
+            font-size: 1.8rem;
+            color: #000;
+        }
+        .project p {
+            margin: 0.5rem 0;
+        }
+        .case-study {
+            margin: 2rem 0;
+            padding: 2rem;
+            background: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .case-study h3 {
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+        .case-study img {
+            width: 100%;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+        }
+        .skills, .contact {
+            text-align: center;
+        }
+        .skills ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 1rem 0;
+        }
+        .skills li {
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .contact p, .contact a {
+            font-size: 1.2rem;
         }
         footer {
-            background: #f4f4f4;
+            background: #000;
+            color: #fff;
             text-align: center;
             padding: 1rem 0;
         }
+        .social-icons {
+            margin: 1rem 0;
+        }
         .social-icons a {
             margin: 0 10px;
-            text-decoration: none;
             font-size: 1.5rem;
-            color: #007BFF;
+            color: #fff;
+            text-decoration: none;
+        }
+        .social-icons a:hover {
+            color: #ffa500;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Huong nguyen</h1>
+        <h1>Jessica Ouyang</h1>
         <nav>
             <a href="#projects">Projects</a>
             <a href="#skills">Skills</a>
@@ -62,30 +146,52 @@
         </nav>
     </header>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Anderson Collection Design Intern</h3>
-            <p><strong>Date:</strong> Winter & Spring 2017</p>
-            <p>During my time at the Anderson Collection, I worked with museum directors to design all of the modern art museum's print and digital media. This is a sample of my work and process.</p>
-        </div>
-        <!-- Additional projects can be added here -->
-    </section>
+    <div class="hero">
+        <h2>Creating Designs That Inspire</h2>
+    </div>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Visual Design</li>
-            <li>Vector Graphics</li>
-            <li>Graphic Design</li>
-            <li>Print Readying</li>
-        </ul>
-    </section>
+    <div class="content">
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project">
+                <img src="images/anderson-collection.jpg" alt="Anderson Collection Project">
+                <div class="project-details">
+                    <h3>Anderson Collection Design Intern</h3>
+                    <p><strong>Date:</strong> Winter & Spring 2017</p>
+                    <p>During my time at the Anderson Collection, I worked with museum directors to design all of the modern art museum's print and digital media. This is a sample of my work and process.</p>
+                </div>
+            </div>
 
+            <div class="case-study">
+                <h3>Case Study: Modern Art Media</h3>
+                <img src="images/case-study.jpg" alt="Case Study">
+                <p>This project involved the creation of both print and digital materials to effectively communicate the Anderson Collection's vision. Detailed iterations and client collaboration were key to success.</p>
+            </div>
+        </section>
 
+        <section id="skills" class="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Visual Design</li>
+                <li>Vector Graphics</li>
+                <li>Graphic Design</li>
+                <li>Print Readying</li>
+            </ul>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:ouyangj@stanford.edu">ouyangj@stanford.edu</a></p>
+            <div class="social-icons">
+                <a href="https://github.com/ouyangatang">GitHub</a>
+                <a href="https://www.linkedin.com/in/jessica-ouyang-062b4b95/">LinkedIn</a>
+                <a href="https://www.instagram.com/ouyangatang/">Instagram</a>
+            </div>
+        </section>
+    </div>
 
     <footer>
-        <p>&copy; 2024 Huong Nguyen</p>
+        <p>&copy; 2024 Jessica Ouyang</p>
     </footer>
 </body>
 </html>
